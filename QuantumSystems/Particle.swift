@@ -10,7 +10,7 @@ import Foundation
 
 class Particle {
     var location = Point(0, 0)
-    var velocity = Velocity(0, 0)
+    var velocity = UnitOfVelocity(0, 0)
     let mass: Double
     let charge: Double
     
@@ -19,7 +19,7 @@ class Particle {
         self.charge = charge
     }
     
-    func moveBy(force: Force, duration: Double) {
+    func moveBy(force: UnitOfForce, duration: Double) {
         let acceleration = force.accelerationFor(mass: mass)
         location = location + velocity.distanceAfter(duration: duration) + acceleration.distanceAfter(duration: duration)
         velocity = velocity + acceleration.velocityAfter(duration: duration)

@@ -27,7 +27,7 @@ class ParticleDrawing: Drawing {
         CGContextFillPath(context)
     }
     
-    func moveBy(force: Force, duration: Double) {
+    func moveBy(force: UnitOfForce, duration: Double) {
         particle.moveBy(force, duration: duration)
     }
 }

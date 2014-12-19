@@ -19,7 +19,7 @@ class CompositeDrawing: Drawing {
         return particleDrawings.map({ $0.particle })
     }
     
-    func moveBy(force: Force, duration: Double) {
+    func moveBy(force: UnitOfForce, duration: Double) {
         for drawing in particleDrawings { drawing.moveBy(force, duration: duration) }
     }
     

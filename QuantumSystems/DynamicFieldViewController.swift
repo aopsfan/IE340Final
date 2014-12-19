@@ -11,15 +11,15 @@ import Cocoa
 class DynamicFieldViewController: NSViewController, DynamicFieldViewDelegate {
     var dynamicFieldView: DynamicFieldView { return view as DynamicFieldView }
     var drawing: Drawing!
-    var force = Force(0, 0)
+    var force = UnitOfForce(0, 0)
     var refreshesPerSecond = 60.0
     var frameRate: Double { return 1.0 / refreshesPerSecond }
     
-    let directionalForces: [ArrowKeyCode: Force] = [
-        .Left: Force(-2500, 0),
-        .Right: Force(2500, 0),
-        .Up: Force(0, -2500),
-        .Down: Force(0, 2500)
+    let directionalUnitOfForces: [ArrowKeyCode: UnitOfForce] = [
+        .Left: UnitOfForce(-2500, 0),
+        .Right: UnitOfForce(2500, 0),
+        .Up: UnitOfForce(0, -2500),
+        .Down: UnitOfForce(0, 2500)
         ]
     
     override func viewDidLoad() {
@@ -54,10 +54,10 @@ class DynamicFieldViewController: NSViewController, DynamicFieldViewDelegate {
     }
     
     func arrowKeyDown(code: ArrowKeyCode, inView view: DynamicFieldView) {
-        force = force + directionalForces[code]!
+        force = force + directionalUnitOfForces[code]!
     }
     
     func arrowKeyUp(code: ArrowKeyCode, inView view: DynamicFieldView) {
-        force = force - directionalForces[code]!
+        force = force - directionalUnitOfForces[code]!
     }
 }

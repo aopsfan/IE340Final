@@ -27,7 +27,7 @@ class QuantumSystemsTests: XCTestCase {
         XCTAssertEqual(particle.momentum(), Vector(0, 0))
         XCTAssertEqual(particle.location, Point(0, 0))
         
-        particle.moveBy(Force(r: 2, theta: 0), duration: timestep)
+        particle.moveBy(UnitOfForce(r: 2, theta: 0), duration: timestep)
         XCTAssertEqual(particle.velocity, Vector(2, 0))
         XCTAssertEqual(particle.location, Point(1, 0))
     }
@@ -38,7 +38,7 @@ class QuantumSystemsTests: XCTestCase {
         XCTAssertEqual(particle.location, Point(0, 0))
         
         for _ in 1...60 {
-            particle.moveBy(Force(r: 2, theta: 0), duration: timestep)
+            particle.moveBy(UnitOfForce(r: 2, theta: 0), duration: timestep)
         }
         
         XCTAssertEqual(particle.velocity, Vector(2, 0))
