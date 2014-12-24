@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1021D6031A49F8B400BC64C2 /* ManualForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021D6021A49F8B400BC64C2 /* ManualForce.swift */; };
 		1021D6041A49F8B400BC64C2 /* ManualForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021D6021A49F8B400BC64C2 /* ManualForce.swift */; };
+		1021D6061A4A417E00BC64C2 /* StationaryConductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021D6051A4A417E00BC64C2 /* StationaryConductor.swift */; };
+		1021D6071A4A417E00BC64C2 /* StationaryConductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021D6051A4A417E00BC64C2 /* StationaryConductor.swift */; };
 		1023CC1D1A3D70F900395718 /* UnitOfAcceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023CC1C1A3D70F900395718 /* UnitOfAcceleration.swift */; };
 		1023CC211A408AB700395718 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023CC201A408AB700395718 /* Drawing.swift */; };
 		103E017E1A424B3E00071021 /* SystemDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E017D1A424B3E00071021 /* SystemDrawing.swift */; };
@@ -57,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		1021D6021A49F8B400BC64C2 /* ManualForce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualForce.swift; sourceTree = "<group>"; };
+		1021D6051A4A417E00BC64C2 /* StationaryConductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationaryConductor.swift; sourceTree = "<group>"; };
 		1023CC1C1A3D70F900395718 /* UnitOfAcceleration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitOfAcceleration.swift; sourceTree = "<group>"; };
 		1023CC201A408AB700395718 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		103E017D1A424B3E00071021 /* SystemDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemDrawing.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 				105BBD551A37748100C88D35 /* Point.swift */,
 				105BBD581A3774EC00C88D35 /* Vector.swift */,
 				105BBD5B1A37A67E00C88D35 /* Particle.swift */,
+				1021D6051A4A417E00BC64C2 /* StationaryConductor.swift */,
 				108888801A44ABAB00527695 /* Action.swift */,
 			);
 			name = Core;
@@ -338,6 +342,7 @@
 				1088887E1A449BDD00527695 /* System.swift in Sources */,
 				10E161201A41505D004C4BC8 /* DynamicFieldView.swift in Sources */,
 				1082754D1A3C1924000A7F1B /* UnitOfForce.swift in Sources */,
+				1021D6061A4A417E00BC64C2 /* StationaryConductor.swift in Sources */,
 				1050EFB01A4914D100FDF897 /* ElectromagneticForce.swift in Sources */,
 				103E017E1A424B3E00071021 /* SystemDrawing.swift in Sources */,
 				10E1611A1A40A5E3004C4BC8 /* ParticleDrawing.swift in Sources */,
@@ -362,6 +367,7 @@
 				1050EFAE1A4913B100FDF897 /* Force.swift in Sources */,
 				10E161211A41505D004C4BC8 /* DynamicFieldView.swift in Sources */,
 				10E161161A409E2F004C4BC8 /* UnitOfAcceleration.swift in Sources */,
+				1021D6071A4A417E00BC64C2 /* StationaryConductor.swift in Sources */,
 				10E161171A409E2F004C4BC8 /* UnitOfForce.swift in Sources */,
 				108888821A44ABAB00527695 /* Action.swift in Sources */,
 				10E1611B1A40A5E3004C4BC8 /* ParticleDrawing.swift in Sources */,

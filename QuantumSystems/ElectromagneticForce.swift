@@ -34,7 +34,10 @@ class ElectromagneticForce: Force {
     }
     
     func actionFor(particle: Particle) -> Action? {
-        return allActions.filter({ $0.particle === particle }).first
+        let actions = allActions.filter({ $0.particle === particle })
+        return actions.reduce(Action(particle: particle, force: UnitOfForce(0, 0))) { (memo, action) in
+            return Action(particle: particle, force: memo.force + action.force)
+        }
     }
     
     private func actionsFor(part1: Particle, _ part2: Particle) -> [Action] {

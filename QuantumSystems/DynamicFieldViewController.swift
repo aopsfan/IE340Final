@@ -25,15 +25,32 @@ class DynamicFieldViewController: NSViewController, DynamicFieldViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let clockCenter = Point(Double(view.frame.width / 2), Double(view.frame.height / 2))
+        let clockRadius = Double(view.frame.height * 2 / 5)
+        var hourPoints = [Point]()
+        
+        for hour in 1...12 {
+            let theta = Double(hour) * M_PI * 2 / 12
+            hourPoints.append(Point(clockRadius * cos(theta) + clockCenter.x, clockRadius * sin(theta) + clockCenter.y))
+        }
+        
+        var systemMembers: [Particle] = hourPoints.map { point in
+            let conductor = StationaryConductor(charge: 5)
+            conductor.location = point
+            
+            return conductor
+        }
+        
         let leftCenter = Point(Double(view.frame.width * 2 / 5), Double(view.frame.height / 2))
         let rightCenter = Point(Double(view.frame.width * 3 / 5), Double(view.frame.height / 2))
         
-        let positiveParticle = Particle(mass: 100, charge: 1);  positiveParticle.location = leftCenter
-        let negativeParticle = Particle(mass: 100, charge: -1); negativeParticle.location = rightCenter
+        let particle = Particle(mass: 100, charge: 1)
+        particle.location = clockCenter
+        systemMembers.append(particle)
         
-        let system = System(members: [positiveParticle, negativeParticle])
+        let system = System(members: systemMembers)
         manualForce = ManualForce(system: system)
-        manualForce.controlledParticle = positiveParticle
+        manualForce.controlledParticle = particle
         system.forces = [manualForce, ElectromagneticForce(system: system)]
         
         drawing = SystemDrawing(system: system)
