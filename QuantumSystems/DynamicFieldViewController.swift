@@ -10,40 +10,39 @@ import Cocoa
 
 class DynamicFieldViewController: NSViewController, DynamicFieldViewDelegate {
     var dynamicFieldView: DynamicFieldView { return view as DynamicFieldView }
-    var drawing: Drawing!
-    var force = UnitOfForce(0, 0)
+    var drawing: SystemDrawing!
+    var manualForce: ManualForce!
     var refreshesPerSecond = 60.0
     var frameRate: Double { return 1.0 / refreshesPerSecond }
     
     let directionalUnitOfForces: [ArrowKeyCode: UnitOfForce] = [
-        .Left: UnitOfForce(-2500, 0),
-        .Right: UnitOfForce(2500, 0),
-        .Up: UnitOfForce(0, -2500),
-        .Down: UnitOfForce(0, 2500)
+        .Left: UnitOfForce(-1e5, 0),
+        .Right: UnitOfForce(1e5, 0),
+        .Up: UnitOfForce(0, -1e5),
+        .Down: UnitOfForce(0, 1e5)
         ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let lightParticle = Particle(mass: 10, charge: 0)
-        lightParticle.location = Point(50, 50)
-        let lightDrawing = ParticleDrawing(lightParticle, color: NSColor.redColor())
+        let leftCenter = Point(Double(view.frame.width * 2 / 5), Double(view.frame.height / 2))
+        let rightCenter = Point(Double(view.frame.width * 3 / 5), Double(view.frame.height / 2))
         
-        let heavyParticle = Particle(mass: 20, charge: 0)
-        heavyParticle.location = Point(100, 200)
-        let heavyDrawing = ParticleDrawing(heavyParticle, color: NSColor.blueColor())
+        let positiveParticle = Particle(mass: 100, charge: 1);  positiveParticle.location = leftCenter
+        let negativeParticle = Particle(mass: 100, charge: -1); negativeParticle.location = rightCenter
         
-        let massiveParticle = Particle(mass: 75, charge: 0)
-        massiveParticle.location = Point(500, 500)
-        let massiveDrawing = ParticleDrawing(massiveParticle, color: NSColor.greenColor())
+        let system = System(members: [positiveParticle, negativeParticle])
+        manualForce = ManualForce(system: system)
+        manualForce.controlledParticle = positiveParticle
+        system.forces = [manualForce, ElectromagneticForce(system: system)]
         
-        drawing = CompositeDrawing(particleDrawings: [massiveDrawing, lightDrawing, heavyDrawing])
+        drawing = SystemDrawing(system: system)
         
         dynamicFieldView.delegate = self
     }
     
     func draw(view: DynamicFieldView, context: CGContextRef) {
-        drawing.moveBy(force, duration: frameRate)
+        drawing.runFor(frameRate)
         drawing.draw(context: context)
     }
     
@@ -54,10 +53,10 @@ class DynamicFieldViewController: NSViewController, DynamicFieldViewDelegate {
     }
     
     func arrowKeyDown(code: ArrowKeyCode, inView view: DynamicFieldView) {
-        force = force + directionalUnitOfForces[code]!
+        manualForce.inputtedForce = manualForce.inputtedForce + directionalUnitOfForces[code]!
     }
     
     func arrowKeyUp(code: ArrowKeyCode, inView view: DynamicFieldView) {
-        force = force - directionalUnitOfForces[code]!
+        manualForce.inputtedForce = manualForce.inputtedForce - directionalUnitOfForces[code]!
     }
 }

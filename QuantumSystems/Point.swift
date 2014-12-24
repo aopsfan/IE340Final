@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Point: Equatable {
+class Point: Equatable, Hashable {
     let x: Double
     let y: Double
     
@@ -19,6 +19,10 @@ class Point: Equatable {
     
     func stringValue() -> String {
         return "(\(x), \(y))"
+    }
+    
+    var hashValue: Int {
+        return stringValue().hash
     }
 }
 

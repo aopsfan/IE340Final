@@ -12,14 +12,24 @@ class ParticleDrawing: Drawing {
     let particle: Particle
     let color: NSColor
     
-    init(_ particle: Particle, color: NSColor) {
+    init(_ particle: Particle) {
         self.particle = particle
+        
+        var color: NSColor!
+        if particle.charge < 0 { // RARE if-else statement from Bruce Ricketts
+            color = NSColor.blueColor()
+        } else if particle.charge == 0 {
+            color = NSColor.whiteColor()
+        } else if particle.charge > 0 {
+            color = NSColor.redColor()
+        }
+        
         self.color = color
     }
     
     func draw(#context: CGContextRef) {
         let center = CGPointMake(CGFloat(particle.location.x), CGFloat(particle.location.y))
-        let radius = CGFloat(particle.mass)
+        let radius = sqrt(CGFloat(particle.mass))
         
         CGContextBeginPath(context)
         CGContextSetFillColorWithColor(context, color.CGColor)

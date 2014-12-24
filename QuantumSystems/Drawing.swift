@@ -10,5 +10,4 @@ import Cocoa
 
 protocol Drawing {
     func draw(#context: CGContextRef)
-    func moveBy(force: UnitOfForce, duration: Double)
 }

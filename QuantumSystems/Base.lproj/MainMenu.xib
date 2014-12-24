@@ -669,14 +669,16 @@
         <window title="QuantumSystems" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="700" height="700"/>
+            <rect key="contentRect" x="0.0" y="100" width="1440" height="700"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <value key="minSize" type="size" width="1440" height="700"/>
+            <value key="maxSize" type="size" width="1440" height="700"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="700" height="700"/>
+                <rect key="frame" x="0.0" y="0.0" width="1440" height="700"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="qWo-Wa-d0C" customClass="DynamicFieldView" customModule="QuantumSystems" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="700" height="700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1440" height="700"/>
                     </customView>
                 </subviews>
                 <constraints>

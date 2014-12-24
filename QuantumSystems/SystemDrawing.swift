@@ -1,5 +1,5 @@
 //
-//  CompositeDrawing.swift
+//  SystemDrawing.swift
 //  QuantumSystems
 //
 //  Created by Bruce Ricketts on 12/17/14.
@@ -8,19 +8,21 @@
 
 import Foundation
 
-class CompositeDrawing: Drawing {
-    var particleDrawings: [ParticleDrawing]
+class SystemDrawing: Drawing {
+    private var particleDrawings: [ParticleDrawing]
+    let system: System
     
-    init(particleDrawings: [ParticleDrawing]) {
-        self.particleDrawings = particleDrawings
+    init(system: System) {
+        self.system = system
+        self.particleDrawings = system.members.map { ParticleDrawing($0) }
     }
     
     func particles() -> [Particle] {
         return particleDrawings.map({ $0.particle })
     }
     
-    func moveBy(force: UnitOfForce, duration: Double) {
-        for drawing in particleDrawings { drawing.moveBy(force, duration: duration) }
+    func runFor(duration: Double) {
+        system.runFor(duration)
     }
     
     func draw(#context: CGContextRef) {

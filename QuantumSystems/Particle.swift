@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Particle {
+class Particle: Equatable {
     var location = Point(0, 0)
     var velocity = UnitOfVelocity(0, 0)
     let mass: Double
@@ -28,4 +28,8 @@ class Particle {
     func momentum() -> Vector {
         return velocity * mass
     }
+}
+
+func ==(left: Particle, right: Particle) -> Bool {
+    return left === right
 }

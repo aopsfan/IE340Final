@@ -12,6 +12,10 @@ class UnitOfForce: Vector { // mass * distance / (duration * duration)
     func accelerationFor(#mass: Double) -> UnitOfAcceleration { // distance / (duration * duration)
         return UnitOfAcceleration(r: r() / mass, theta: theta())
     }
+    
+    func oppositeForce() -> UnitOfForce {
+        return UnitOfForce(r: r(), theta: theta() + M_PI)
+    }
 }
 
 func +(left: UnitOfForce, right: UnitOfForce) -> UnitOfForce {

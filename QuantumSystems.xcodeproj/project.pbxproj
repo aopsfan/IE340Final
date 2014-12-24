@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1021D6031A49F8B400BC64C2 /* ManualForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021D6021A49F8B400BC64C2 /* ManualForce.swift */; };
+		1021D6041A49F8B400BC64C2 /* ManualForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021D6021A49F8B400BC64C2 /* ManualForce.swift */; };
 		1023CC1D1A3D70F900395718 /* UnitOfAcceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023CC1C1A3D70F900395718 /* UnitOfAcceleration.swift */; };
 		1023CC211A408AB700395718 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023CC201A408AB700395718 /* Drawing.swift */; };
-		103E017E1A424B3E00071021 /* CompositeDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E017D1A424B3E00071021 /* CompositeDrawing.swift */; };
-		103E017F1A424B3E00071021 /* CompositeDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E017D1A424B3E00071021 /* CompositeDrawing.swift */; };
+		103E017E1A424B3E00071021 /* SystemDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E017D1A424B3E00071021 /* SystemDrawing.swift */; };
+		103E017F1A424B3E00071021 /* SystemDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103E017D1A424B3E00071021 /* SystemDrawing.swift */; };
+		1050EFAD1A4913B100FDF897 /* Force.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1050EFAC1A4913B100FDF897 /* Force.swift */; };
+		1050EFAE1A4913B100FDF897 /* Force.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1050EFAC1A4913B100FDF897 /* Force.swift */; };
+		1050EFB01A4914D100FDF897 /* ElectromagneticForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1050EFAF1A4914D100FDF897 /* ElectromagneticForce.swift */; };
+		1050EFB11A4914D100FDF897 /* ElectromagneticForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1050EFAF1A4914D100FDF897 /* ElectromagneticForce.swift */; };
+		1050EFB31A4915EE00FDF897 /* ElectromagneticForceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1050EFB21A4915EE00FDF897 /* ElectromagneticForceTests.swift */; };
 		105BBD3A1A374F9100C88D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105BBD391A374F9100C88D35 /* AppDelegate.swift */; };
 		105BBD3C1A374F9100C88D35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105BBD3B1A374F9100C88D35 /* Images.xcassets */; };
 		105BBD3F1A374F9100C88D35 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 105BBD3D1A374F9100C88D35 /* MainMenu.xib */; };
@@ -20,6 +27,10 @@
 		105BBD5C1A37A67E00C88D35 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105BBD5B1A37A67E00C88D35 /* Particle.swift */; };
 		1082754D1A3C1924000A7F1B /* UnitOfForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1082754C1A3C1924000A7F1B /* UnitOfForce.swift */; };
 		108275531A3C2EB6000A7F1B /* UnitOfVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108275521A3C2EB6000A7F1B /* UnitOfVelocity.swift */; };
+		1088887E1A449BDD00527695 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088887D1A449BDD00527695 /* System.swift */; };
+		1088887F1A449BDD00527695 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088887D1A449BDD00527695 /* System.swift */; };
+		108888811A44ABAB00527695 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108888801A44ABAB00527695 /* Action.swift */; };
+		108888821A44ABAB00527695 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108888801A44ABAB00527695 /* Action.swift */; };
 		10E161111A409E2F004C4BC8 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1023CC201A408AB700395718 /* Drawing.swift */; };
 		10E161131A409E2F004C4BC8 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105BBD551A37748100C88D35 /* Point.swift */; };
 		10E161141A409E2F004C4BC8 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105BBD581A3774EC00C88D35 /* Vector.swift */; };
@@ -45,9 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1021D6021A49F8B400BC64C2 /* ManualForce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualForce.swift; sourceTree = "<group>"; };
 		1023CC1C1A3D70F900395718 /* UnitOfAcceleration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitOfAcceleration.swift; sourceTree = "<group>"; };
 		1023CC201A408AB700395718 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
-		103E017D1A424B3E00071021 /* CompositeDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeDrawing.swift; sourceTree = "<group>"; };
+		103E017D1A424B3E00071021 /* SystemDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemDrawing.swift; sourceTree = "<group>"; };
+		1050EFAC1A4913B100FDF897 /* Force.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Force.swift; sourceTree = "<group>"; };
+		1050EFAF1A4914D100FDF897 /* ElectromagneticForce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectromagneticForce.swift; sourceTree = "<group>"; };
+		1050EFB21A4915EE00FDF897 /* ElectromagneticForceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectromagneticForceTests.swift; sourceTree = "<group>"; };
 		105BBD341A374F9100C88D35 /* QuantumSystems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuantumSystems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105BBD381A374F9100C88D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		105BBD391A374F9100C88D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +76,8 @@
 		105BBD5B1A37A67E00C88D35 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
 		1082754C1A3C1924000A7F1B /* UnitOfForce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitOfForce.swift; sourceTree = "<group>"; };
 		108275521A3C2EB6000A7F1B /* UnitOfVelocity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitOfVelocity.swift; sourceTree = "<group>"; };
+		1088887D1A449BDD00527695 /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		108888801A44ABAB00527695 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		10E161191A40A5E3004C4BC8 /* ParticleDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleDrawing.swift; sourceTree = "<group>"; };
 		10E1611F1A41505D004C4BC8 /* DynamicFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicFieldView.swift; sourceTree = "<group>"; };
 		10E161221A4150EB004C4BC8 /* DynamicFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicFieldViewController.swift; sourceTree = "<group>"; };
@@ -84,12 +101,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1023CC1F1A3EC44000395718 /* View */ = {
+		1021D6011A49D59100BC64C2 /* Drawings */ = {
+			isa = PBXGroup;
+			children = (
+				1023CC201A408AB700395718 /* Drawing.swift */,
+				10E161191A40A5E3004C4BC8 /* ParticleDrawing.swift */,
+				103E017D1A424B3E00071021 /* SystemDrawing.swift */,
+			);
+			name = Drawings;
+			sourceTree = "<group>";
+		};
+		1023CC1F1A3EC44000395718 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				10E1611F1A41505D004C4BC8 /* DynamicFieldView.swift */,
 			);
-			name = View;
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1050EFA81A4912B800FDF897 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1088887D1A449BDD00527695 /* System.swift */,
+				1050EFA91A4912CD00FDF897 /* Units */,
+				105BBD551A37748100C88D35 /* Point.swift */,
+				105BBD581A3774EC00C88D35 /* Vector.swift */,
+				105BBD5B1A37A67E00C88D35 /* Particle.swift */,
+				108888801A44ABAB00527695 /* Action.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		1050EFA91A4912CD00FDF897 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				108275521A3C2EB6000A7F1B /* UnitOfVelocity.swift */,
+				1023CC1C1A3D70F900395718 /* UnitOfAcceleration.swift */,
+				1082754C1A3C1924000A7F1B /* UnitOfForce.swift */,
+			);
+			name = Units;
+			sourceTree = "<group>";
+		};
+		1050EFAB1A49137100FDF897 /* Forces */ = {
+			isa = PBXGroup;
+			children = (
+				1050EFAC1A4913B100FDF897 /* Force.swift */,
+				1050EFAF1A4914D100FDF897 /* ElectromagneticForce.swift */,
+				1021D6021A49F8B400BC64C2 /* ManualForce.swift */,
+			);
+			name = Forces;
 			sourceTree = "<group>";
 		};
 		105BBD2B1A374F9100C88D35 = {
@@ -113,9 +173,10 @@
 		105BBD361A374F9100C88D35 /* QuantumSystems */ = {
 			isa = PBXGroup;
 			children = (
-				10E1611E1A41502B004C4BC8 /* Controller */,
-				1023CC1F1A3EC44000395718 /* View */,
-				105BBD541A376C8700C88D35 /* Model */,
+				10E1611E1A41502B004C4BC8 /* Controllers */,
+				1021D6011A49D59100BC64C2 /* Drawings */,
+				1023CC1F1A3EC44000395718 /* Views */,
+				105BBD541A376C8700C88D35 /* Models */,
 				105BBD391A374F9100C88D35 /* AppDelegate.swift */,
 				105BBD3B1A374F9100C88D35 /* Images.xcassets */,
 				105BBD3D1A374F9100C88D35 /* MainMenu.xib */,
@@ -136,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				105BBD4A1A374F9100C88D35 /* QuantumSystemsTests.swift */,
+				1050EFB21A4915EE00FDF897 /* ElectromagneticForceTests.swift */,
 				105BBD481A374F9100C88D35 /* Supporting Files */,
 			);
 			path = QuantumSystemsTests;
@@ -149,28 +211,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		105BBD541A376C8700C88D35 /* Model */ = {
+		105BBD541A376C8700C88D35 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				105BBD551A37748100C88D35 /* Point.swift */,
-				105BBD581A3774EC00C88D35 /* Vector.swift */,
-				108275521A3C2EB6000A7F1B /* UnitOfVelocity.swift */,
-				1023CC1C1A3D70F900395718 /* UnitOfAcceleration.swift */,
-				1082754C1A3C1924000A7F1B /* UnitOfForce.swift */,
-				105BBD5B1A37A67E00C88D35 /* Particle.swift */,
+				1050EFAB1A49137100FDF897 /* Forces */,
+				1050EFA81A4912B800FDF897 /* Core */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		10E1611E1A41502B004C4BC8 /* Controller */ = {
+		10E1611E1A41502B004C4BC8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				10E161221A4150EB004C4BC8 /* DynamicFieldViewController.swift */,
-				1023CC201A408AB700395718 /* Drawing.swift */,
-				10E161191A40A5E3004C4BC8 /* ParticleDrawing.swift */,
-				103E017D1A424B3E00071021 /* CompositeDrawing.swift */,
 			);
-			name = Controller;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,16 +329,21 @@
 			files = (
 				105BBD561A37748100C88D35 /* Point.swift in Sources */,
 				10E161231A4150EB004C4BC8 /* DynamicFieldViewController.swift in Sources */,
+				108888811A44ABAB00527695 /* Action.swift in Sources */,
 				105BBD5C1A37A67E00C88D35 /* Particle.swift in Sources */,
 				105BBD591A3774EC00C88D35 /* Vector.swift in Sources */,
 				1023CC211A408AB700395718 /* Drawing.swift in Sources */,
 				105BBD3A1A374F9100C88D35 /* AppDelegate.swift in Sources */,
+				1021D6031A49F8B400BC64C2 /* ManualForce.swift in Sources */,
+				1088887E1A449BDD00527695 /* System.swift in Sources */,
 				10E161201A41505D004C4BC8 /* DynamicFieldView.swift in Sources */,
 				1082754D1A3C1924000A7F1B /* UnitOfForce.swift in Sources */,
-				103E017E1A424B3E00071021 /* CompositeDrawing.swift in Sources */,
+				1050EFB01A4914D100FDF897 /* ElectromagneticForce.swift in Sources */,
+				103E017E1A424B3E00071021 /* SystemDrawing.swift in Sources */,
 				10E1611A1A40A5E3004C4BC8 /* ParticleDrawing.swift in Sources */,
 				108275531A3C2EB6000A7F1B /* UnitOfVelocity.swift in Sources */,
 				1023CC1D1A3D70F900395718 /* UnitOfAcceleration.swift in Sources */,
+				1050EFAD1A4913B100FDF897 /* Force.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,13 +353,19 @@
 			files = (
 				10E161111A409E2F004C4BC8 /* Drawing.swift in Sources */,
 				10E161131A409E2F004C4BC8 /* Point.swift in Sources */,
+				1050EFB31A4915EE00FDF897 /* ElectromagneticForceTests.swift in Sources */,
+				1050EFB11A4914D100FDF897 /* ElectromagneticForce.swift in Sources */,
+				1088887F1A449BDD00527695 /* System.swift in Sources */,
 				10E161141A409E2F004C4BC8 /* Vector.swift in Sources */,
 				10E161151A409E2F004C4BC8 /* UnitOfVelocity.swift in Sources */,
+				1021D6041A49F8B400BC64C2 /* ManualForce.swift in Sources */,
+				1050EFAE1A4913B100FDF897 /* Force.swift in Sources */,
 				10E161211A41505D004C4BC8 /* DynamicFieldView.swift in Sources */,
 				10E161161A409E2F004C4BC8 /* UnitOfAcceleration.swift in Sources */,
 				10E161171A409E2F004C4BC8 /* UnitOfForce.swift in Sources */,
+				108888821A44ABAB00527695 /* Action.swift in Sources */,
 				10E1611B1A40A5E3004C4BC8 /* ParticleDrawing.swift in Sources */,
-				103E017F1A424B3E00071021 /* CompositeDrawing.swift in Sources */,
+				103E017F1A424B3E00071021 /* SystemDrawing.swift in Sources */,
 				10E161181A409E2F004C4BC8 /* Particle.swift in Sources */,
 				105BBD4B1A374F9100C88D35 /* QuantumSystemsTests.swift in Sources */,
 			);

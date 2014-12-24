@@ -24,6 +24,10 @@ class Vector: Point {
     func theta() -> Double {
         return atan2(y, x)
     }
+    
+    func unitVector() -> Vector {
+        return Vector(r: 1, theta: theta())
+    }
 }
 
 func +(left: Vector, right: Vector) -> Vector {
