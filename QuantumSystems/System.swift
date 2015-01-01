@@ -16,16 +16,22 @@ class System {
         self.members = members
     }
     
+    func addForce(force: Force) {
+        forces.append(force)
+    }
+    
     func runFor(duration: Double) {
-        for force in forces { force.cacheActions() }
-        
-        for particle in members {
-            let forceUnits = forces.reduce(UnitOfForce(0, 0)) { (memo, force) in
+        for force in forces { force.calculateActions() }
+        for action in reducedActions() { action.runFor(duration) }
+    }
+    
+    func reducedActions() -> [Action] {
+        return members.map { particle in
+            return self.forces.reduce(Action(particle: particle, force: UnitOfForce(0, 0))) { (memo, force) in
                 let action = force.actionFor(particle)
                 let appliedForceUnits = action == nil ? UnitOfForce(0, 0) : action!.force
-                return memo + appliedForceUnits
+                return Action(particle: particle, force: memo.force + appliedForceUnits)
             }
-            particle.moveBy(forceUnits, duration: duration)
         }
     }
 }

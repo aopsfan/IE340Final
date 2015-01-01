@@ -9,7 +9,8 @@
 import Foundation
 
 protocol Force {
-    init(system: System)
-    func cacheActions()
+    func applyToSystem(system: System)
+    func calculateActions()
     func actionFor(particle: Particle) -> Action?
+    func duplicate() -> Force
 }

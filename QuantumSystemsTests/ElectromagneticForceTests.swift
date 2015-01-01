@@ -24,10 +24,13 @@ class ElectromagneticForceTests: XCTestCase {
         particle3 = Particle(mass: 1, charge: 0); particle3.location = Point(0, 100)
         
         system = System(members: [particle1, particle2, particle3]) // not testing System
-        force = ElectromagneticForce(system: system)
+        force = ElectromagneticForce()
+        force.applyToSystem(system)
     }
 
     func testActions() {
+        force.calculateActions()
+        
         XCTAssertNotNil(force.actionFor(particle1))
         XCTAssertNotNil(force.actionFor(particle2))
         XCTAssertNotNil(force.actionFor(particle3))

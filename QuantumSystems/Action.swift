@@ -21,6 +21,10 @@ class Action {
         return Action(particle: particle, force: force.oppositeForce())
     }
     
+    func duplicate() -> Action {
+        return Action(particle: particle.duplicate(), force: force)
+    }
+    
     func runFor(duration: Double) {
         particle.moveBy(force, duration: duration)
     }

@@ -9,17 +9,24 @@
 import Foundation
 
 class ManualForce: Force {
-    let system: System
-    var controlledParticle: Particle!
+    var controlledParticle: Particle
     var inputtedForce = UnitOfForce(0, 0)
     
-    required init(system: System) {
-        self.system = system
+    init(controlledParticle: Particle) {
+        self.controlledParticle = controlledParticle
     }
     
-    func cacheActions() {}
+    func applyToSystem(system: System) {
+        system.addForce(self)
+    }
+    
+    func calculateActions() {}
     
     func actionFor(particle: Particle) -> Action? {
         return particle == controlledParticle ? Action(particle: particle, force: inputtedForce) : nil
+    }
+    
+    func duplicate() -> Force {
+        return ManualForce(controlledParticle: controlledParticle)
     }
 }
